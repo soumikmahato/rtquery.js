@@ -1,9 +1,12 @@
+
+
 class rtquery{
     constructor(url){
         if(url){
             this.url = url;
         }
     }
+    
     
     render(elem, attrs, parent, html){
         if(!elem || !attrs || !parent ){
@@ -81,7 +84,15 @@ class rtquery{
            }
         }
 
-        
+        navlink (url, e, calllback){
+            (e || window.event).preventDefault();
+            fetch(url).then(res => res.text()).then((html) =>{
+                document.getElementsByTagName("html")[0].innerHTML = html;
+                calllback();
+            }).catch((err)=>{
+              console.log(err);
+            })
+        }
         
     }
     
