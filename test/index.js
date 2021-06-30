@@ -4,7 +4,7 @@ var app = express();
 var port = 7777;
 
 app.use(express.static("./public"));
-app.use()
+app.use(require("./router/router"));
 // Our first route
 app.get('/', function (req, res) {
     res.sendFile('.public/index.html');
