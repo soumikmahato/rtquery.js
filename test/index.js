@@ -4,10 +4,10 @@ var app = express();
 var port = 7777;
 
 app.use(express.static("./public"));
-
+app.use()
 // Our first route
 app.get('/', function (req, res) {
-    res.sendFile('./index.html');
+    res.sendFile('.public/index.html');
 });
 
 // Listen to port 5000
