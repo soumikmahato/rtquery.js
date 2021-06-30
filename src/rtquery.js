@@ -19,6 +19,18 @@ class rtquery{
         let node = document.createElement(elem);
         parent.appendChild(node);
         node.innerHTML = html;
+
+        //array 
+        var array = attrs;
+        for(var key in attrs){
+            node.setAttribute(key, attrs[key]);
+           }
+         return new Promise((success, unsuccess)=>{
+            success("Success");
+        });
+        }
+
+        
         
     }
-}
+    
