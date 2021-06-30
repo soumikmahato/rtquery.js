@@ -1,4 +1,9 @@
+/*
+(c) 2021 Soumik Mahato
+License: MIT
+Version: 1.0.0-alpha-2
 
+*/
 
 class rtquery{
     constructor(url){
