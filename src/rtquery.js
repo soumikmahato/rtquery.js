@@ -30,6 +30,24 @@ class rtquery{
         });
         }
 
+        realtime(callback){
+            var url = location.href;
+            setInterval(()=>{
+                //make the page realtime
+             fetch('#').then(data => data.text()).then((html) =>{ 
+            
+            document.getElementsByTagName('html')[0].innerHTML = html;
+            callback();
+                
+            });
+            console.clear();
+            return new Promise((success, unsuccess)=>{
+                success("Success");
+            });
+            },1000);
+
+        }
+
         
         
     }
