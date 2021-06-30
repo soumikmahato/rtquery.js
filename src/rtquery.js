@@ -48,6 +48,39 @@ class rtquery{
 
         }
 
+        include(url, type, $async, parent){
+            if(!url || !type){
+                return new Promise((success, failed)=>{
+                    failed("Failed to include. Parameters should be correct");
+                });
+            
+           }
+           if(type == "javascript"){
+               if(!$async){
+                   var elem = document.createElement("script");
+                   document.body.appendChild(elem);
+                   elem.src = url;
+                   elem.type="text/javascript";
+                   parent.insertBefore(elem, parent);
+               }
+               else{
+                var elem = document.createElement("script");
+                elem.async = true;
+                document.body.appendChild(elem);
+                elem.src = url;
+                elem.type="text/javascript";
+                parent.insertBefore(elem, parent);
+            }
+           }
+           if(type == "css"){
+               var elem = document.createElement("link");
+               document.head.appendChild(elem);
+               elem.rel = "stylesheet";
+               elem.type = "text/css";
+               elem.href = url;
+           }
+        }
+
         
         
     }
