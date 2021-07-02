@@ -66,18 +66,16 @@ class rtquery{
            if(type == "javascript"){
                if(!$async){
                    var elem = document.createElement("script");
-                   document.body.appendChild(elem);
                    elem.src = url;
                    elem.type="text/javascript";
-                   parent.insertBefore(elem, parent);
+                   parent.appendChild(elem);
                }
                else{
                 var elem = document.createElement("script");
                 elem.async = true;
-                document.body.appendChild(elem);
                 elem.src = url;
                 elem.type="text/javascript";
-                parent.insertBefore(elem, parent);
+                parent.appendChild(elem);
             }
            }
            if(type == "css"){
