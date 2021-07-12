@@ -8,8 +8,19 @@
     <script src="dist/rtquery.js"></script>
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <script src="includes/main.js"></script>
+    </div>
     <div id="app"></div>
-    <script src="includes/main.js"></script>
+   
+    <script>
+        function rtquery_init(){
+        
+              }
+        rtquery_init();
+        window.onload = () =>{
+           rt.realtime(rtquery_init());            
+        }
+    </script>
 </body>
 </html>

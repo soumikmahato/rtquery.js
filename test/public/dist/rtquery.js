@@ -45,7 +45,7 @@ class rtquery{
              fetch('#').then(data => data.text()).then((html) =>{ 
             
             document.getElementsByTagName('html')[0].innerHTML = html;
-            callback();
+            callback;
                 
             });
             console.clear();
