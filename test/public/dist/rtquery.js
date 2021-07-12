@@ -98,7 +98,10 @@ class rtquery{
         }
     
         Router(callback){
-            
+            let hash = location.hash.substring(1);
+        window.onhashchange = ()=>{
+            callback(hash);
+        };
         }
     }
 
