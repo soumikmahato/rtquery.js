@@ -96,6 +96,10 @@ class rtquery{
               console.log(err);
             })
         }
-        
+    
+        Router(callback){
+            
+        }
     }
+
     
