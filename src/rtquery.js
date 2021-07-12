@@ -45,7 +45,7 @@ class rtquery{
              fetch('#').then(data => data.text()).then((html) =>{ 
             
             document.getElementsByTagName('html')[0].innerHTML = html;
-            callback();
+            callback;
                 
             });
             console.clear();
@@ -96,6 +96,13 @@ class rtquery{
               console.log(err);
             })
         }
-        
+    
+        Router(callback){
+            let hash = location.hash.substring(1);
+        window.onhashchange = ()=>{
+            callback(hash);
+        };
+        }
     }
+
     
